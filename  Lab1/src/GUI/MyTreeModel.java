@@ -21,13 +21,13 @@ import javax.swing.tree.TreePath;
  *
  * @author User
  */
-public class TreeModel1 implements TreeModel {
+public class MyTreeModel implements TreeModel {
     private Library lib = new Library();
     private Users users = new Users();
     private Librarian worker = new Librarian(lib,users);
     private Node root;
 
- public TreeModel1() {
+ public MyTreeModel() {
     worker.run();
     root = new Node("Корневая запись");
         

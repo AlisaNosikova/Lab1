@@ -29,7 +29,7 @@ public class Frame extends JFrame {
         contents.setLayout(new FlowLayout(FlowLayout.CENTER));
         contents.add(add);
         add.addActionListener((ActionEvent e) -> { 
-                tree = new JTree(new TreeModel1());
+                tree = new JTree(new MyTreeModel());
                 JScrollPane scrollPane = new JScrollPane(tree, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
                 contents.removeAll(); // Удалить все существующие компоненты
                 contents.setLayout(new BorderLayout());
