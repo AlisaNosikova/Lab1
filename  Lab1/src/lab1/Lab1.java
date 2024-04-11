@@ -4,9 +4,6 @@
  */
 package lab1;
 
-import Library.Library;
-import Library.Users;
-import People.Bibliotekar;
 
 /**
  *

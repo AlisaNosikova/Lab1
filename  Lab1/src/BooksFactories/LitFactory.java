@@ -10,7 +10,9 @@ package BooksFactories;
  * @author User
  */
 public interface LitFactory {
-    FictLit ñreateFictLit();
-    EduLit createEduLit();
+  public FictLit ñreateFictLit();
+  public  EduLit createEduLit();
+
+   
 
 }

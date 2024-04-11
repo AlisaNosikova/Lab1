@@ -14,13 +14,13 @@ import java.util.*;
  * @author User
  */
 public class InfoEduBooks {
-    Reader reader = new Reader();
-    ArrayList<String> disciplinesRus = new ArrayList<>();
-    ArrayList<String> disciplinesEng = new ArrayList<>();
-    ArrayList<String> authorsEduEng = new ArrayList<>();
-    ArrayList<String> universities = new ArrayList<>();
-    ArrayList<String> levels = new ArrayList<>(Arrays.asList("для бакалавриата","для магистратуры"));
-    ArrayList<String> types = new ArrayList<>(Arrays.asList("Учебник","Пособие", "Задачник"));
+    private Reader reader = new Reader();
+    private ArrayList<String> disciplinesRus = new ArrayList<>();
+    private ArrayList<String> disciplinesEng = new ArrayList<>();
+    private ArrayList<String> authorsEduEng = new ArrayList<>();
+    private ArrayList<String> universities = new ArrayList<>();
+    private ArrayList<String> levels = new ArrayList<>(Arrays.asList("для бакалавриата","для магистратуры"));
+    private ArrayList<String> types = new ArrayList<>(Arrays.asList("Учебник","Пособие", "Задачник"));
     public void run(){
         String name = "C:\\Users\\User\\Downloads\\EduLit.csv";
         ArrayList<String[]> data = reader.run(name);

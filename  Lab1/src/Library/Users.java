@@ -4,8 +4,6 @@
  */
 package Library;
 
-import People.PeopleFactory;
-import Books.classes.EngFictLit;
 import People.*;
 import java.util.ArrayList;
 import java.util.Random;
@@ -16,9 +14,9 @@ import lab1.*;
  * @author User
  */
 public class Users {
-    ArrayList <Person> students  = new ArrayList<>();
-    ArrayList <Person> teachers  = new ArrayList<>();
-    InfoPerson peopleInf = new InfoPerson();
+    private ArrayList <Person> students  = new ArrayList<>();
+    private ArrayList <Person> teachers  = new ArrayList<>();
+    private InfoPerson peopleInf = new InfoPerson();
     public Users(){
          peopleInf.run();
     }
@@ -38,10 +36,10 @@ public class Users {
         int randNum2 = random.nextInt(peopleInf.getSurnamesTeacherMale().size()-1);
         int randNum3 = random.nextInt(peopleInf.getNamesFemale().size()-1);
         int randNum4 = random.nextInt(peopleInf.getSurnamesTeacherFemale().size()-1);
-        int randNum5 = random.nextInt(peopleInf.patronymicsMale().size()-1);
-        int randNum6 = random.nextInt(peopleInf.patronymicsFemale().size()-1);
-        teachers.add((PeopleFactory.createPerson(peopleInf.getNamesMale().get(randNum1), peopleInf.getSurnamesTeacherMale().get(randNum2), peopleInf.patronymicsMale().get(randNum5))));
-        teachers.add((PeopleFactory.createPerson(peopleInf.getNamesFemale().get(randNum3), peopleInf.getSurnamesTeacherFemale().get(randNum4), peopleInf.patronymicsFemale().get(randNum6))));
+        int randNum5 = random.nextInt(peopleInf.getPatronymicsMale().size()-1);
+        int randNum6 = random.nextInt(peopleInf.getPatronymicsFemale().size()-1);
+        teachers.add((PeopleFactory.createPerson(peopleInf.getNamesMale().get(randNum1), peopleInf.getSurnamesTeacherMale().get(randNum2), peopleInf.getPatronymicsMale().get(randNum5))));
+        teachers.add((PeopleFactory.createPerson(peopleInf.getNamesFemale().get(randNum3), peopleInf.getSurnamesTeacherFemale().get(randNum4), peopleInf.getPatronymicsFemale().get(randNum6))));
         
        }
     }

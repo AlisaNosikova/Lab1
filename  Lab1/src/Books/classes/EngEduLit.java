@@ -33,6 +33,7 @@ public class EngEduLit implements EduLit{
      public String getLevel(){
         return level;
     }
+    @Override
      public String getFullName(){
          return "Дисциплина:" + getDiscipline() + ".Автор:" + getAuthor() + ".Университет:" + getUniversity() + ".Уровень:" + getLevel();
      }

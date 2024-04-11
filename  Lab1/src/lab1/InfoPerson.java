@@ -55,10 +55,10 @@ public class InfoPerson {
     public ArrayList<String> getSurnamesTeacherFemale(){
         return surnamesTeacherFemale;
     }
-    public ArrayList<String> patronymicsMale(){
+    public ArrayList<String> getPatronymicsMale(){
         return patronymicsMale;
     }
-    public ArrayList<String> patronymicsFemale(){
+    public ArrayList<String> getPatronymicsFemale(){
         return patronymicsFemale;
     }
 }

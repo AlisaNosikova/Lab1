@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * @author User
  */
 public class Reader {
-     ArrayList<String[]> componentsList = new ArrayList<String[]>();
+    private ArrayList<String[]> componentsList = new ArrayList<String[]>();
     public ArrayList<String[]> run(String name){
       try{
           InputStream stream = new FileInputStream(name);

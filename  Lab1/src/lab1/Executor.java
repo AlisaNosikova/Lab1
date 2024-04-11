@@ -5,17 +5,12 @@
 package lab1;
 
 import GUI.*;
-import Library.Library;
-import Library.Users;
-import People.Bibliotekar;
-
 /**
  *
  * @author User
  */
 public class Executor {
     public void run(){
-  //  Frame frame = new Frame("Библиотека");
-        TreeTest treeTest = new TreeTest();
+        Frame frame = new Frame();
     }  
 }

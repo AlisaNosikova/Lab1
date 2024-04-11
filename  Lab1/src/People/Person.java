@@ -4,18 +4,15 @@
  */
 package People;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 
 /**
  *
  * @author User
  */
 public abstract class Person {
-    String name;
-    String surname;
-    
-    Abonement ab = new Abonement();
+    private String name;
+    private String surname;
+    private Abonement ab = new Abonement();
     public Person(String name, String surname){
         this.name = name;
         this.surname = surname;
@@ -30,8 +27,5 @@ public abstract class Person {
         return ab;
     }
     public abstract String getTotalName();
-    public void goToAbonement(ArrayList<String> listBooks){
-        
-    }
     
 }

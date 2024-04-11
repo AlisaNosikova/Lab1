@@ -10,7 +10,7 @@ import BooksFactories.FictLit;
  *
  * @author User
  */
-public class RusFictLit implements FictLit{
+public class RusFictLit  implements FictLit{
     String name;
     String author;
     String year;
@@ -25,7 +25,7 @@ public class RusFictLit implements FictLit{
         return name;
     }
     public String getAuthor(){
-        return name;
+        return author;
     }
     public String getYear(){
         return year;

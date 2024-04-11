@@ -10,7 +10,7 @@ import BooksFactories.EduLit;
  *
  * @author User
  */
-public class RusEduLit implements EduLit{
+public class RusEduLit  implements EduLit{
     String type;
     String discipline;
     public RusEduLit(String type, String discipline){

@@ -13,29 +13,25 @@ import BooksFactories.FictLit;
 public class EngFictLit implements FictLit{
     String name;
     String author;
-    String year;
     String production;
-    public EngFictLit(String name, String author, String production,  String year){
+    public EngFictLit(String name, String author, String production){
         this.name = name;
         this.author = author;
-        this.year = year;
+        
         this.production = production;
 }
     public String getName(){
         return name;
     }
     public String getAuthor(){
-        return name;
-    }
-    public String getYear(){
-        return year;
+        return author;
     }
      public String getProd(){
         return production;
     }
     @Override
      public String getFullName(){
-         return "Название:" + getName() + ".Автор:" + getAuthor() + ".Издательство:" + getProd() + ".Год написания:" + getYear();
+         return "Название:" + getName() + ".Автор:" + getAuthor() + ".Издательство:" + getProd();
      }
    
 }

@@ -4,6 +4,7 @@
  */
 package Library;
 
+
 import BooksFactories.*;
 import java.util.ArrayList;
 
@@ -14,18 +15,22 @@ import java.util.ArrayList;
 public class Library {
     LitFactory EngFactory = new EngFactory();
     LitFactory RusFactory = new RusFactory();
-    ArrayList<String> LitList = new ArrayList<>();
+    private ArrayList<FictLit> FictList = new ArrayList<>();
+    private ArrayList<EduLit> EduList = new ArrayList<>();
    
     public void run(){
         for (int i=0; i<20; i++){
-        LitList.add(EngFactory.createEduLit().getFullName());
-        LitList.add(EngFactory.ñreateFictLit().getFullName());
-        LitList.add(RusFactory.createEduLit().getFullName());
-        LitList.add(RusFactory.ñreateFictLit().getFullName());
+        EduList.add( EngFactory.createEduLit());
+        FictList.add(EngFactory.ñreateFictLit());
+        EduList.add( RusFactory.createEduLit());
+        FictList.add(RusFactory.ñreateFictLit());
        
     }
     }
-        public ArrayList<String> getListBooks(){
-            return LitList;
+        public ArrayList<FictLit> getFictList(){
+            return FictList;
+        }
+         public ArrayList<EduLit> getEduList(){
+            return EduList;
         }
 }

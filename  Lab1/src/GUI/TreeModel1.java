@@ -4,10 +4,14 @@
  */
 package GUI;
 
+
+import BooksFactories.EduLit;
+import BooksFactories.FictLit;
 import Library.Library;
 import Library.Users;
-import People.Bibliotekar;
+import People.Librarian;
 import People.Person;
+import java.util.ArrayList;
 import java.util.HashSet;
 import javax.swing.event.TreeModelListener;
 import javax.swing.tree.TreeModel;
@@ -17,45 +21,40 @@ import javax.swing.tree.TreePath;
  *
  * @author User
  */
-public class SimpleModel implements TreeModel {
-    Library lib = new Library();
-    Users users = new Users();
-    Bibliotekar worker = new Bibliotekar(lib,users);
-     
+public class TreeModel1 implements TreeModel {
+    private Library lib = new Library();
+    private Users users = new Users();
+    private Librarian worker = new Librarian(lib,users);
     private Node root;
 
- public SimpleModel() {
+ public TreeModel1() {
     worker.run();
     root = new Node("Корневая запись");
         
     Node studentsNode = new Node("Студенты");
     Node teachersNode = new Node("Преподаватели");
-
-    for (int i=0; i<worker.getListStudents().size(); i++){
-        Person student = worker.getListStudents().get(i);
-        Node nodeStudent = new Node(student.getTotalName());
-        studentsNode.addChild(nodeStudent);
-        HashSet<String> set = student.getAb().getListBooks();
-        for (String element : set) {
-            nodeStudent.addChild(new Node(element));
-            
-        }     
-    }
-
-    for (int i=0; i<worker.getListTeachers().size(); i++){
-        Person teacher = worker.getListTeachers().get(i);
-        Node nodeTeacher = new Node(teacher.getTotalName());
-        teachersNode.addChild(nodeTeacher); // Добавляем узел преподавателей к узлу "Преподаватели"
-        
-        HashSet<String> set = teacher.getAb().getListBooks();
-        for (String element : set) {
-            nodeTeacher.addChild(new Node(element));
-        }     
-    }
+    addNode(worker.getListStudents(),studentsNode);
+    addNode(worker.getListTeachers(),teachersNode);
 
     root.addChild(studentsNode);
     root.addChild(teachersNode); // Добавляем узел "Преподаватели" к корневой записи
 }
+ public void addNode(ArrayList<Person> list, Node node ){
+      for (Person student: list){
+       // Person student = worker.getListStudents().get(i);
+        Node node1 = new Node(student.getTotalName());
+        node.addChild(node1);
+        HashSet<FictLit> setFict = student.getAb().getFictSet();
+        HashSet<EduLit> setEdu = student.getAb().getEduSet();
+        for (FictLit element : setFict) {
+            node1.addChild(new Node(element.getFullName()));   
+        }     
+          for (EduLit element : setEdu) {
+            node1.addChild(new Node(element.getFullName()));   
+        }     
+    }
+
+ }
     @Override
     public Object getRoot() {
         return root;

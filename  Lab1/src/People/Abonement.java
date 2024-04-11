@@ -4,6 +4,8 @@
  */
 package People;
 
+
+import BooksFactories.*;
 import java.util.HashSet;
 
 /**
@@ -11,12 +13,19 @@ import java.util.HashSet;
  * @author User
  */
 public class Abonement {
-    HashSet<String> books = new HashSet<>();
-    public void checkBook(String listBooks){
-        books.add(listBooks);
+    private HashSet<FictLit> FictBooks = new HashSet<>();
+    private HashSet<EduLit> EduBooks = new HashSet<>();
+    public void addFictBook(FictLit book){
+        FictBooks.add(book);
     }
-    public HashSet<String> getListBooks(){
-        return books;
+    public void addEduBook(EduLit book){
+        EduBooks.add(book);
+    }
+    public HashSet<FictLit> getFictSet(){
+        return FictBooks;
+    }
+     public HashSet<EduLit> getEduSet(){
+        return EduBooks;
     }
    
 }

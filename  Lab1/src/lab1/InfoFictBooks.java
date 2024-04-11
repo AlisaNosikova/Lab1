@@ -12,14 +12,14 @@ import java.util.ArrayList;
  * @author User
  */
 public class InfoFictBooks {
-    Reader reader = new Reader();
-    ArrayList<String> namesFictRus = new ArrayList<>();
-    ArrayList<String> authorsFictRus = new ArrayList<>();
-    ArrayList<String> prodFictRus = new ArrayList<>();
-    ArrayList<String> namesFictEng = new ArrayList<>();
-    ArrayList<String> authorsFictEng = new ArrayList<>();
-    ArrayList<String> prodFictEng = new ArrayList<>();
-    ArrayList<String> years = new ArrayList<>();
+    private Reader reader = new Reader();
+    private ArrayList<String> namesFictRus = new ArrayList<>();
+    private ArrayList<String> authorsFictRus = new ArrayList<>();
+    private ArrayList<String> prodFictRus = new ArrayList<>();
+    private ArrayList<String> namesFictEng = new ArrayList<>();
+    private ArrayList<String> authorsFictEng = new ArrayList<>();
+    private ArrayList<String> prodFictEng = new ArrayList<>();
+    private ArrayList<String> years = new ArrayList<>();
      public void run(){
         String name = "C:\\Users\\User\\Downloads\\FictLit.csv";
         ArrayList<String[]> data = reader.run(name);
